@@ -51,6 +51,69 @@
     <style>
     .navbar-vertical.navbar-expand-xl+.content { margin-right: 0; }
     </style>
+
+     <!-- CUSTOM STYLES FOR FIXING SIDEBAR ISSUE -->
+     <style>
+      .main > .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+  
+      .container .navbar-vertical {
+        min-width: 200px;
+        width: 30%;
+        position: relative;
+        margin-top: 0 !important;
+        top: 0;
+        display: flex;
+        margin-right: auto;
+      }
+  
+      .navbar-nav {
+        width: 100%;
+      }
+  
+      .alert {
+        width: 100%;
+      }
+  
+      .content {
+        margin-left: 0 !important;
+        width: 70%;
+      }
+  
+      .main > ul.navbar-nav.col-md-2 {
+        width: 100%;
+      }
+  
+      .main > .content {
+        width: auto;
+      margin-left: auto;
+      }
+  
+      @media (max-width: 768px) {
+        .content,
+        .container .navbar-vertical {
+          width: 100%;
+          margin: 0;
+        }
+  
+        .content {
+          min-height: auto;
+          padding-bottom: 0;
+        }
+  
+        .main > .container {
+          flex-direction: column-reverse;
+        }
+  
+        .container .navbar-vertical-content {
+          width: 100%;
+        }
+      }
+    </style>
+      <!-- END CUSTOM STYLES FOR FIXING SIDEBAR ISSUE -->
   </head>
 
 
@@ -314,7 +377,7 @@
         <div class="content">
           
             <div class="row g-3 mt-4">
-              <div class="col-9 offset-3 order-xxl-3 col-xl-12 offset-xl-0 col-md-10 offset-md-2 col-sm-9 offset-sm-3">
+              <div class="col-12 order-xxl-3 col-xl-12 col-md-12 col-sm-12 ">
                 <div class="card">
                   <div class="card-header">
                     <h4 class="mb-0">You have no Sites configured!</h4>
